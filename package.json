@@ -1,0 +1,36 @@
+{
+  "name": "samira-consultorio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "install:deps": "npm install",
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --watch server/index.js",
+    "setup": "node scripts/setup.js",
+    "seed:demo": "node scripts/seed.js",
+    "test": "node --test --test-concurrency=1",
+    "check": "node scripts/check.js",
+    "format": "prettier --write \"public/**/*.{html,css,js}\" \"server/*.js\" \"scripts/*.js\" \"test/*.js\" package.json README.md",
+    "format:check": "prettier --check \"public/**/*.{html,css,js}\" \"server/*.js\" \"scripts/*.js\" \"test/*.js\" package.json README.md",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js",
+    "migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "docx": "^9.5.1",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.1",
+    "nodemailer": "^10.1.0",
+    "pdfkit": "^0.17.1"
+  },
+  "devDependencies": {
+    "jsdom": "^27.0.1",
+    "prettier": "^3.9.10"
+  }
+}
